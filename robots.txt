@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# TODO-JOHN: this uses the host the live sitemap already uses (no www). Update if John picks www as canonical.
-Sitemap: https://thegreatnotchinn.com/sitemap.xml
