@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Great Notch Inn | Live Rock &amp; Blues · Since 1939</title>
+  <meta name="description" content="Live rock &amp; blues and never a cover charge. A family-owned roadhouse on Route 46 West in Little Falls, NJ since 1939. Full bar, porch &amp; package goods." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+
+  <!-- TODO-JOHN: canonical URL. Pick www or no-www (https://thegreatnotchinn.com/ vs https://www.thegreatnotchinn.com/), then add
+       <link rel="canonical" href="..."> and <meta property="og:url" content="...">. Left out until John decides. -->
+
+  <!-- Open Graph / Twitter (social previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Great Notch Inn" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="The Great Notch Inn | Live Rock &amp; Blues Roadhouse Since 1939" />
+  <meta property="og:description" content="Live rock &amp; blues and never a cover charge. A family-owned roadhouse on Route 46 West in Little Falls, NJ since 1939." />
+  <!-- TODO-JOHN: social preview photo. Choose the photo, then add og:image (1200x630, absolute URL), og:image:alt, and switch twitter:card to summary_large_image. -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@GreatNotchInn" />
+  <meta name="twitter:title" content="The Great Notch Inn | Live Rock &amp; Blues Roadhouse Since 1939" />
+  <meta name="twitter:description" content="Live rock &amp; blues and never a cover charge on Route 46 West in Little Falls, NJ since 1939." />
+
+  <!-- Structured data: only facts the live site already states.
+       Hours, cash payment, bar pies and 21+ policy were confirmed in the project archive (September–October 2026).
+       TODO-JOHN: url + image (need the canonical host),
+       geo + hasMap (need the real Google Maps/Business link), priceRange, servesCuisine (food), paymentAccepted, age policy.
+       TODO-JOHN: addressLocality is "Little Falls" as on the live site. Confirm Little Falls vs Woodland Park. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "The Great Notch Inn",
+  "description": "Family-owned roadhouse on Route 46 West since 1939, with live rock and blues and never a cover charge.",
+  "foundingDate": "1939",
+  "telephone": "+1-973-256-7742",
+  "email": "greatnotchinn@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "400 Route 46 West",
+    "addressLocality": "Little Falls",
+    "addressRegion": "NJ",
+    "postalCode": "07424",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100051551302390",
+    "https://www.instagram.com/greatnotchinn/",
+    "https://x.com/GreatNotchInn/"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "17:00",
+      "closes": "02:00"
+    }
+  ],
+  "paymentAccepted": "Cash only (ATM on site)",
+  "servesCuisine": "Pizza",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Age policy",
+      "value": "21 and over only"
+    }
+  ]
+}
+  </script>
+
+  <!-- Progressive enhancement: the page remains visible without JavaScript.
+       The independent deadline also dismisses the loader if app initialization fails. -->
+  <script>
+    document.documentElement.classList.add('js', 'is-loading');
+    window.gniLoadingDeadline = setTimeout(function () {
+      document.documentElement.classList.remove('is-loading');
+      document.querySelectorAll('[data-loading-inert]').forEach(function (el) {
+        el.inert = false;
+        el.removeAttribute('data-loading-inert');
+      });
+    }, 9000);
+  </script>
+  <link rel="stylesheet" href="css/loading.css" />
+  <script src="js/loading.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/IMG_0742-800.avif 800w, images/IMG_0742-1200.avif 1200w, images/IMG_0742-1600.avif 1600w" imagesizes="(max-width: 1100px) 92vw, 1000px" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Defined inline (before images load) so onerror handlers always exist. Hides a photo that fails to load;
+    // never substitutes another image.
+    function handleImageError(img) { img.onerror = null; (img.closest('figure') || img).style.display = 'none'; }
+    // Section background photos below the first screen load as they scroll near (see app.js). No JS = all load.
+    if ('IntersectionObserver' in window) document.documentElement.classList.add('lazybg');
+    // Opening the page at a #section: lay out the whole page so the jump is exact.
+    if (location.hash) document.documentElement.classList.add('cv-off');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (a) document.documentElement.classList.add('cv-off');
+    }, true);
+  </script>
+</head>
+<body>
+  <div class="site-loader" id="site-loader" aria-label="Loading The Great Notch Inn">
+    <div class="loader-content">
+      <p class="loader-est">LITTLE FALLS, NEW JERSEY · SINCE 1939</p>
+      <img class="loader-logo" id="loader-logo" src="images/great-notch-logo-transparent.png" width="1321" height="1191" alt="Great Notch Inn logo with the roadhouse, motorcycles and musical notes" fetchpriority="high" decoding="async">
+      <p class="loader-tagline">LIVE ROCK. REAL BLUES. NO COVER.</p>
+      <progress class="loader-progress" id="loader-progress" max="100" value="0" aria-label="Loading the website">LOADING</progress>
+      <p class="loader-status" role="status">LOADING THE ROADHOUSE…</p>
+      <button type="button" id="skip-loader">ENTER THE NOTCH <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <nav id="site-nav" aria-label="Main">
+      <a class="brand" href="#home">The Great Notch Inn</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+      </button>
+      <div class="nav-inner" id="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#calendar">CALENDAR</a>
+        <a href="#articles">ARTICLES</a>
+        <a href="#photos">PHOTOS</a>
+        <a href="#videos">VIDEOS</a>
+        <a href="#links">LINKS</a>
+        <a href="#merchandise">MERCHANDISE</a>
+        <a href="#history">HISTORY</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
+    <!-- Desktop: floating button. Mobile: replaced by the bottom action bar. -->
+    <a class="live-tonight" id="liveTonightBtn" href="#calendar" title="Jump to tonight's live music">LIVE TONIGHT</a>
+  </header>
+
+  <main id="main">
+  <!-- =========================================================================
+       1. HOME SECTION
+       ========================================================================= -->
+  <section id="home" class="parallax">
+    <div class="panel texture-wood">
+      <h1>THE GREAT NOTCH INN</h1>
+      <div class="sub">Established 1939 — home of live rock &amp; blues</div>
+      
+      <div class="hero-feature-box">
+        <p class="kicker">FEATURED IN USA TODAY AND NORTHJERSEY.COM AS A TOP DIVE BAR DESTINATION IN THE NATION!</p>
+        
+        <picture>
+          <source type="image/avif" srcset="images/IMG_0742-800.avif 800w, images/IMG_0742-1200.avif 1200w, images/IMG_0742-1600.avif 1600w" sizes="(max-width: 1100px) 92vw, 1000px">
+          <source type="image/webp" srcset="images/IMG_0742-800.webp 800w, images/IMG_0742-1200.webp 1200w, images/IMG_0742-1600.webp 1600w" sizes="(max-width: 1100px) 92vw, 1000px">
+          <img id="hero-image-insert" src="images/IMG_0742.jpg" width="1600" height="799" alt="The Great Notch Inn's porch and roofline lit up in red and green neon at night" fetchpriority="high" decoding="async">
+        </picture>
+        
+        <p style="text-align: center; margin-top: 6px; margin-bottom: 12px; font-size: 1.1rem; color: #fff; font-weight: bold;">
+          Named one of the best dive bars in the US.
+        </p>
+        <p style="text-align: center; margin: 0;">
+          <a href="https://www.northjersey.com/story/entertainment/dining/2025/11/21/great-notch-inn-nj-clifton-best-dives-bars-us/87379877007/" target="_blank" rel="noopener noreferrer" class="read-more" style="background: linear-gradient(180deg, #ff6600, #cc3300);">
+            READ THE FULL ARTICLE
+          </a>
+        </p>
+      </div>
+
+      <div class="visible-section visit-info">
+        <div class="section-heading"><h2>About your visit</h2></div>
+        <div class="section-body">
+      <p class="body-copy home-full-intro">The Great Notch Inn provides the finest in live entertainment, mixed drinks and beers. There's never a cover charge, and you can find the best New Jersey bands playing rock and blues in a wonderful rockin roadside environment. The Great Notch Inn is a relaxing destination after a long bike ride. Hang out in the warm rustic interior, or out on the porch in the fresh air! We can also make your private parties or events a memorable occasion. Package goods available. ATM now available!</p>
+      <p class="body-copy mobile-intro">Live rock &amp; blues, cold drinks, and a front porch on Route 46. Family-owned since 1939, with never a cover charge.</p>
+
+      <p style="margin-top:16px">
+        <strong style="color:var(--accent-lime)">ADDRESS:</strong>
+        <!-- TODO-JOHN: Little Falls vs Woodland Park. The address is shown exactly as on the live site. -->
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">
+          400 Route 46 West, Little Falls, NJ 07424
+        </a>
+      </p>
+
+      <p style="margin-top:6px">
+        <strong style="color:var(--accent-cyan)">PHONE:</strong>
+        <a href="tel:+19732567742" style="color:inherit;text-decoration:none">(973) 256-7742</a>
+      </p>
+
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta-btn cta-call" href="tel:+19732567742">Call (973) 256-7742</a>
+        <!-- TODO-JOHN: real Google Maps / Business Profile link. This directions URL is built from the address until John sends the official link. -->
+        <a class="cta-btn cta-directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer" data-todo="maps-link">Get Directions</a>
+        <a class="cta-btn cta-events" href="#calendar">Tonight's Show &amp; Events</a>
+        <a class="cta-btn cta-book" href="mailto:greatnotchinn@gmail.com?subject=Private%20Booking%20Inquiry">Book a Private Party</a>
+      </div>
+
+      <div class="hours-block visible-section hours-info" id="hours">
+        <div class="section-heading"><h2 class="hours-title">Hours &amp; Info</h2></div>
+        <div class="section-body">
+        
+        <p class="hours-line"><strong>Hours:</strong> Tuesday–Sunday, 5 PM – 2 AM. Closed Monday.</p>
+        <p class="hours-line"><strong>Live music:</strong> Tuesday–Sunday. Tuesday–Thursday shows generally start at 8 PM; Friday–Saturday at 9 PM. Sunday times vary. <a href="#calendar">Check the calendar for each show’s time</a>.</p>
+        <p class="hours-line"><strong>Food:</strong> Bar pies available.</p>
+        <p class="hours-line"><strong>Payment:</strong> Cash only. ATM on site.</p>
+        <p class="hours-line"><strong>Age policy:</strong> 21 and over only.</p>
+        <p class="hours-note">Never a cover charge · Full bar · Package goods · Front porch</p>
+        </div>
+      </div>
+
+      <div class="social-row" aria-label="Follow The Great Notch Inn">
+        <a class="social-btn" href="https://www.facebook.com/profile.php?id=100051551302390" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="social-btn" href="https://www.instagram.com/greatnotchinn/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-btn" href="https://x.com/GreatNotchInn/" target="_blank" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. ABOUT SECTION
+       ========================================================================= -->
+  <section id="about" class="parallax">
+    <div class="panel content-panel texture-paper">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>ABOUT THE NOTCH</h2>
+      <div class="sub">A Little Falls roadhouse since 1939</div>
+        </div>
+        <div class="section-body">
+      <!-- Music schedule follows the confirmed Tuesday–Sunday operating days. -->
+      <p class="body-copy">The Great Notch Inn is a family-owned tavern that was opened by Gregory and Florence DiLeo in 1939. For many years the Notch served breakfast, lunch, and dinner along with a variety of beer and liquor. While everything around has changed, the Great Notch Inn has basically remained the same. Gregory DiLeo operated the bar until his passing in 1988, leaving the business to his daughter Florence and children Rich and Gail. Since 1988, the Great Notch Inn has found its niche as a live music venue, hosting many rock and blues bands from the tri-state area — featuring live entertainment every night we’re open, Tuesday–Sunday. The Notch also offers limited food and takeout beer and wine from open till close. The beautiful front porch attracts bikers and locals who enjoy a cold beer and the old-time roadhouse feel.</p>
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="#articles" class="read-more">Read Articles & History</a>
+        <a href="#photos" class="read-more">See Photos</a>
+        <a href="#calendar" class="read-more" style="background: linear-gradient(180deg, #ff6600, #cc3300);">Live Music Schedule</a>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. CALENDAR SECTION (GOOGLE CALENDAR EMBED + LIVE TABLE)
+       ========================================================================= -->
+  <section id="calendar" class="parallax">
+    <div class="panel" style="padding:24px">
+      <h2>UPCOMING EVENTS</h2>
+      <div class="sub">Live music schedule • always no cover</div>
+      
+      <div class="calendar-wrap">
+        <!-- Live upcoming shows from Google Calendar API -->
+        <table id="future">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Date</th>
+              <th>Event / Band</th>
+              <th style="width: 25%;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="3" style="text-align:center; padding: 20px;">Loading upcoming live shows...</td></tr>
+          </tbody>
+        </table>
+        
+        <button id="showMoreBtn" class="show-more-btn" style="display:none;">SHOW MORE EVENTS</button>
+        
+        <!-- Timed-only month view; compact phone disclosure. -->
+        <details class="responsive-disclosure month-disclosure" open data-mobile-collapsed>
+          <summary><h3 style="margin-top:40px; margin-bottom:15px; border-top:1px solid rgba(255,255,255,0.1); padding-top:30px;">
+          MONTHLY LIVE MUSIC CALENDAR
+        </h3></summary>
+          <div class="disclosure-body">
+        <div id="monthly-calendar" class="monthly-calendar" aria-label="Monthly live music calendar">
+          <div class="month-toolbar">
+            <button type="button" id="month-prev" aria-label="Previous month">←</button>
+            <h3 id="month-title" aria-live="polite"></h3>
+            <button type="button" id="month-next" aria-label="Next month">→</button>
+            <button type="button" id="month-today">Today</button>
+          </div>
+          <p id="month-status" role="status">Loading live music…</p>
+          <div id="month-grid" class="month-grid"></div>
+          <noscript><p><a href="https://calendar.google.com/calendar/embed?src=greatnotchinn%40gmail.com&amp;ctz=America%2FNew_York">Open the full Google Calendar</a> for the latest shows.</p></noscript>
+        </div>
+
+          </div>
+        </details>
+
+        <div style="display: flex; justify-content: center; gap: 14px; margin-top: 14px; flex-wrap: wrap;">
+          <a href="https://calendar.google.com/calendar/u/0/embed?src=greatnotchinn@gmail.com" target="_blank" rel="noopener noreferrer" class="read-more" style="background: linear-gradient(180deg, #3366cc, #1a3c7a);">
+            📅 Open In Google Calendar
+          </a>
+          <a href="mailto:greatnotchinn@gmail.com?subject=Band%20Booking%20Inquiry%20-%20The%20Great%20Notch%20Inn" class="read-more">
+            🎸 Book Your Band
+          </a>
+        </div>
+        
+        <!-- Past Events Toggle -->
+        <button type="button" class="toggle" id="togglePastBtn" aria-expanded="false" aria-controls="past-wrap">Show Past Events ▼</button>
+        
+        <div id="past-wrap" style="display:none">
+          <h3 style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">Past Events</h3>
+          <table id="past">
+            <thead>
+              <tr>
+                <th style="width: 28%;">Date</th>
+                <th>Event / Band</th>
+                <th style="width: 25%;">Time</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. ARTICLES & PRESS SECTION
+       ========================================================================= -->
+  <section id="articles" class="parallax">
+    <div class="panel content-panel texture-paper">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>ARTICLES & PRESS</h2>
+      <div class="sub">Historic clippings, local press & features</div>
+        </div>
+        <div class="section-body">
+      
+      <p class="rail-hint">SWIPE THROUGH THE PRESS <span aria-hidden="true">→</span></p>
+      <div class="articles-list mobile-rail" id="articlesList" tabindex="0" role="region" aria-label="Articles and press">
+<div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://njmonthly.com/articles/eat-drink/the-best-bars-in-new-jersey/" target="_blank" rel="noopener noreferrer">NJ Monthly: Snippet from "The Best Bars in New Jersey"</a></h3>
+            <p class="body-copy">A mention of the Inn's long, colorful history, its survival against highway expansions, and its vibrant music scene.</p>
+          </div>
+        </div>
+
+        <div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://lambertcastle.org/the-great-notch-inn/" target="_blank" rel="noopener noreferrer">Passaic County Historical Society: The Inn's Deep History</a></h3>
+            <p class="body-copy">An article detailing the fascinating history of the roadhouse, tracing its origins and evolution from its earliest days in Northern NJ.</p>
+          </div>
+        </div>
+
+        <div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://thisismynewjersey.wordpress.com/2016/04/23/protecting-the-great-notch-inn/" target="_blank" rel="noopener noreferrer">Protecting the Great Notch Inn (Highway Expansion Story)</a></h3>
+            <p class="body-copy">An article detailing the historic fight to save the Inn from the Route 46 highway expansion project and preserve the landmark.</p>
+          </div>
+        </div>
+
+<div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://www.jerseyindie.com/blog/the-2018-south-mountain-international-blues-festival-is-coming-at-you" target="_blank" rel="noopener noreferrer">Jersey Indie: Venue for South Mountain Blues Festival</a></h3>
+            <p class="body-copy">An article highlighting the Inn's consistent role as a key venue and major supporter of the Northern NJ blues music scene.</p>
+          </div>
+        </div>
+
+        <div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://nysmusic.com/2023/04/24/matt-niedbalski/" target="_blank" rel="noopener noreferrer">NYS Music: Interview with Jazz Drummer Matt Niedbalski</a></h3>
+            <p class="body-copy">A music industry piece that mentions the Inn as a memorable, raw, and essential stop for touring and local musicians.</p>
+          </div>
+        </div>
+
+        <div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://www.youtube.com/watch?v=ChKVZnfocOU" target="_blank" rel="noopener noreferrer">YouTube: "Rocking Out at The Legendary Great Notch Inn"</a></h3>
+            <p class="body-copy">In-depth video media coverage, featuring conversation with the owner about the roadhouse's history, legacy, and community spirit.</p>
+          </div>
+        </div>
+
+        <div class="static-article-item">
+          <div class="content">
+            <h3><a href="https://forums.egullet.org/topic/43122-great-notch-inn/" target="_blank" rel="noopener noreferrer">eGullet Forums: Great Notch Inn Review & Discussion</a></h3>
+            <p class="body-copy">A classic online discussion thread from the early 2000s, reviewing the Inn's unique atmosphere, food, and reputation.</p>
+          </div>
+        </div>
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. PHOTOS SECTION
+       ========================================================================= -->
+  <section id="photos" class="parallax">
+    <div class="panel content-panel texture-wood">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>PHOTOS</h2>
+      <div class="sub">Snapshots from the bar, porch, bikes and shows</div>
+        </div>
+        <div class="section-body">
+      <p style="text-align:center;">
+        <a href="https://www.instagram.com/greatnotchinn/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-pink); font-size:1.2rem; font-weight:800; display:block; margin-bottom:15px; text-decoration:none;">
+          CLICK HERE TO VIEW OUR INSTAGRAM FEED: @greatnotchinn
+        </a>
+      </p>
+      <p class="body-copy" style="color:#cfcfcf; margin-bottom: 20px;">
+        Visit our <strong>Instagram</strong> page for the most current photos and live updates from the Inn! (Click any image to enlarge)
+      </p>
+      
+      <p class="rail-hint">SWIPE THROUGH PHOTOS <span aria-hidden="true">→</span></p>
+      <div class="gallery mobile-rail" id="photoGrid" tabindex="0" role="region" aria-label="Great Notch Inn photos">
+        <img src="images/photos/1-400.webp" srcset="images/photos/1-400.webp 400w, images/photos/1-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1280" height="753" data-full="images/photos/1-1600.webp" onerror="handleImageError(this)" alt="The Great Notch Inn lit up in red and green neon at night, with WELCOME painted out front" loading="lazy" decoding="async">
+        <img src="images/photos/2-400.webp" srcset="images/photos/2-400.webp 400w, images/photos/2-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="960" height="640" data-full="images/photos/2-1600.webp" onerror="handleImageError(this)" alt="Rows of motorcycles packed together at a big bike gathering" loading="lazy" decoding="async">
+        <img src="images/photos/3-400.webp" srcset="images/photos/3-400.webp 400w, images/photos/3-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1080" height="1080" data-full="images/photos/3-1600.webp" onerror="handleImageError(this)" alt="Vintage black-and-white photo of patrons raising drinks at the bar" loading="lazy" decoding="async">
+        <img src="images/photos/4-400.webp" srcset="images/photos/4-400.webp 400w, images/photos/4-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="828" height="828" data-full="images/photos/4-1600.webp" onerror="handleImageError(this)" alt="The Great Notch Inn covered in snow" loading="lazy" decoding="async">
+        <img src="images/photos/5-400.webp" srcset="images/photos/5-400.webp 400w, images/photos/5-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="778" height="1600" data-full="images/photos/5-1600.webp" onerror="handleImageError(this)" alt="Phone screenshot of a rider in a helmet with a mirrored rainbow visor" loading="lazy" decoding="async">
+        <img src="images/photos/6-400.webp" srcset="images/photos/6-400.webp 400w, images/photos/6-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="778" height="1600" data-full="images/photos/6-1600.webp" onerror="handleImageError(this)" alt="Phone screenshot of the neon-lit bar interior" loading="lazy" decoding="async">
+        <img src="images/photos/7-400.webp" srcset="images/photos/7-400.webp 400w, images/photos/7-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1078" data-full="images/photos/7-1600.webp" onerror="handleImageError(this)" alt="Black-and-white photo of the Inn's roadside sign under a lightning storm" loading="lazy" decoding="async">
+        <img src="images/photos/8-400.webp" srcset="images/photos/8-400.webp 400w, images/photos/8-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="758" height="1600" data-full="images/photos/8-1600.webp" onerror="handleImageError(this)" alt="Instagram screenshot of the Inn under bright orange autumn trees" loading="lazy" decoding="async">
+        <img src="images/photos/9-400.webp" srcset="images/photos/9-400.webp 400w, images/photos/9-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1080" height="1312" data-full="images/photos/9-1600.webp" onerror="handleImageError(this)" alt="Two smiling regulars wearing Great Notch Inn beanies" loading="lazy" decoding="async">
+        <img src="images/photos/10-400.webp" srcset="images/photos/10-400.webp 400w, images/photos/10-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1127" data-full="images/photos/10-1600.webp" onerror="handleImageError(this)" alt="The Inn and its roadside sign next to a blazing orange autumn tree" loading="lazy" decoding="async">
+        <img src="images/photos/11-400.webp" srcset="images/photos/11-400.webp 400w, images/photos/11-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="995" height="800" data-full="images/photos/11-1600.webp" onerror="handleImageError(this)" alt="Red neon NOTCH sign glowing in the dark" loading="lazy" decoding="async">
+        <img src="images/photos/12-400.webp" srcset="images/photos/12-400.webp 400w, images/photos/12-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="773" data-full="images/photos/12-1600.webp" onerror="handleImageError(this)" alt="The Inn's porch glowing with red and blue neon at night" loading="lazy" decoding="async">
+        <img src="images/photos/13-400.webp" srcset="images/photos/13-400.webp 400w, images/photos/13-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="641" data-full="images/photos/13-1600.webp" onerror="handleImageError(this)" alt="The front porch lit up at dusk, with WELCOME painted on the ground" loading="lazy" decoding="async">
+        <img src="images/photos/14-400.webp" srcset="images/photos/14-400.webp 400w, images/photos/14-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1078" data-full="images/photos/14-1600.webp" onerror="handleImageError(this)" alt="Santa Claus on a motorcycle in front of the neon-lit Inn" loading="lazy" decoding="async">
+        <img src="images/photos/15-400.webp" srcset="images/photos/15-400.webp 400w, images/photos/15-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="849" data-full="images/photos/15-1600.webp" onerror="handleImageError(this)" alt="A woman on the porch beneath the red neon Great Notch Inn sign" loading="lazy" decoding="async">
+        <img src="images/photos/16-400.webp" srcset="images/photos/16-400.webp 400w, images/photos/16-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="902" height="1260" data-full="images/photos/16-1600.webp" onerror="handleImageError(this)" alt="Black-and-white photo of motorcycles parked in front of the Inn" loading="lazy" decoding="async">
+        <img src="images/photos/17-400.webp" srcset="images/photos/17-400.webp 400w, images/photos/17-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1047" data-full="images/photos/17-1600.webp" onerror="handleImageError(this)" alt="Original Coors sign ringed with twinkling lights" loading="lazy" decoding="async">
+        <img src="images/photos/18-400.webp" srcset="images/photos/18-400.webp 400w, images/photos/18-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="676" data-full="images/photos/18-1600.webp" onerror="handleImageError(this)" alt="Carved wooden Great Notch Inn sign reading Est. 1939" loading="lazy" decoding="async">
+        <img src="images/photos/19-400.webp" srcset="images/photos/19-400.webp 400w, images/photos/19-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1080" height="654" data-full="images/photos/19-1600.webp" onerror="handleImageError(this)" alt="The Inn on a bright summer day" loading="lazy" decoding="async">
+        <img src="images/photos/20-400.webp" srcset="images/photos/20-400.webp 400w, images/photos/20-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1068" data-full="images/photos/20-1600.webp" onerror="handleImageError(this)" alt="The rustic wooden Inn and porch on a sunny day" loading="lazy" decoding="async">
+        <img src="images/photos/21-400.webp" srcset="images/photos/21-400.webp 400w, images/photos/21-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1072" height="1028" data-full="images/photos/21-1600.webp" onerror="handleImageError(this)" alt="Illustrated map captioned: And they built it right over the Great Notch Inn, where the beer and the music flows" loading="lazy" decoding="async">
+        <img src="images/photos/22-400.webp" srcset="images/photos/22-400.webp 400w, images/photos/22-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1049" height="1412" data-full="images/photos/22-1600.webp" onerror="handleImageError(this)" alt="A motorcycle parked in front of the neon-lit Inn at night" loading="lazy" decoding="async">
+        <img src="images/photos/23-400.webp" srcset="images/photos/23-400.webp 400w, images/photos/23-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="988" data-full="images/photos/23-1600.webp" onerror="handleImageError(this)" alt="The Inn's red neon roofline against the night sky" loading="lazy" decoding="async">
+        <img src="images/photos/24-400.webp" srcset="images/photos/24-400.webp 400w, images/photos/24-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1051" data-full="images/photos/24-1600.webp" onerror="handleImageError(this)" alt="The porch glowing red and blue at night" loading="lazy" decoding="async">
+        <img src="images/photos/25-400.webp" srcset="images/photos/25-400.webp 400w, images/photos/25-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="800" height="624" data-full="images/photos/25-1600.webp" onerror="handleImageError(this)" alt="Motorcycles lined up in front of the neon-lit Inn at night" loading="lazy" decoding="async">
+        <img src="images/photos/26-400.webp" srcset="images/photos/26-400.webp 400w, images/photos/26-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="926" height="563" data-full="images/photos/26-1600.webp" onerror="handleImageError(this)" alt="Bar and Bands sign and memorabilia on the Inn's walls" loading="lazy" decoding="async">
+        <img src="images/photos/27-400.webp" srcset="images/photos/27-400.webp 400w, images/photos/27-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="758" height="1600" data-full="images/photos/27-1600.webp" onerror="handleImageError(this)" alt="Phone screenshot of the front of the Inn on a cloudy day" loading="lazy" decoding="async">
+        <img src="images/photos/28-400.webp" srcset="images/photos/28-400.webp 400w, images/photos/28-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="976" height="544" data-full="images/photos/28-1600.webp" onerror="handleImageError(this)" alt="The Inn's front and sign in daylight" loading="lazy" decoding="async">
+        <img src="images/photos/29-400.webp" srcset="images/photos/29-400.webp 400w, images/photos/29-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1600" height="758" data-full="images/photos/29-1600.webp" onerror="handleImageError(this)" alt="Screenshot of a couple in wedding clothes posing outdoors" loading="lazy" decoding="async">
+        <img src="images/photos/30-400.webp" srcset="images/photos/30-400.webp 400w, images/photos/30-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="811" data-full="images/photos/30-1600.webp" onerror="handleImageError(this)" alt="A classic red car parked in front of the Inn" loading="lazy" decoding="async">
+        <img src="images/photos/31-400.webp" srcset="images/photos/31-400.webp 400w, images/photos/31-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="712" data-full="images/photos/31-1600.webp" onerror="handleImageError(this)" alt="The Inn and a classic car in the parking lot" loading="lazy" decoding="async">
+        <img src="images/photos/32-400.webp" srcset="images/photos/32-400.webp 400w, images/photos/32-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="738" height="1600" data-full="images/photos/32-1600.webp" onerror="handleImageError(this)" alt="Phone screenshot of a tall blue neon sign" loading="lazy" decoding="async">
+        <img src="images/photos/33-400.webp" srcset="images/photos/33-400.webp 400w, images/photos/33-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1435" data-full="images/photos/33-1600.webp" onerror="handleImageError(this)" alt="Two regulars smiling at the bar" loading="lazy" decoding="async">
+        <img src="images/photos/34-400.webp" srcset="images/photos/34-400.webp 400w, images/photos/34-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1108" data-full="images/photos/34-1600.webp" onerror="handleImageError(this)" alt="Two regulars posing in front of the bar's neon signs" loading="lazy" decoding="async">
+        <img src="images/photos/35-400.webp" srcset="images/photos/35-400.webp 400w, images/photos/35-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="738" height="1600" data-full="images/photos/35-1600.webp" onerror="handleImageError(this)" alt="Phone screenshot of a knit Great Notch Inn beanie" loading="lazy" decoding="async">
+        <img src="images/photos/36-400.webp" srcset="images/photos/36-400.webp 400w, images/photos/36-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1074" data-full="images/photos/36-1600.webp" onerror="handleImageError(this)" alt="Black Great Notch Inn tank top: New Jersey's Rockin' Roadhouse" loading="lazy" decoding="async">
+        <img src="images/photos/37-400.webp" srcset="images/photos/37-400.webp 400w, images/photos/37-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1198" data-full="images/photos/37-1600.webp" onerror="handleImageError(this)" alt="Great Notch Inn shirt artwork: New Jersey's Rockin' Roadhouse, Est. 1939, Rt. 46 West in Little Falls NJ" loading="lazy" decoding="async">
+        <img src="images/photos/38-400.webp" srcset="images/photos/38-400.webp 400w, images/photos/38-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="1078" data-full="images/photos/38-1600.webp" onerror="handleImageError(this)" alt="The rustic Inn under a dramatic cloudy sky" loading="lazy" decoding="async">
+        <img src="images/photos/39-400.webp" srcset="images/photos/39-400.webp 400w, images/photos/39-800.webp 800w" sizes="(max-width: 420px) 46vw, (max-width: 900px) 30vw, 240px" width="1079" height="604" data-full="images/photos/39-1600.webp" onerror="handleImageError(this)" alt="Great Notch Inn T-shirts and a trucker hat on display" loading="lazy" decoding="async">
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. VIDEOS SECTION
+       ========================================================================= -->
+  <section id="videos" class="parallax">
+    <div class="panel content-panel texture-paper">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>VIDEOS</h2>
+      <div class="sub">Live clips and feature videos</div>
+        </div>
+        <div class="section-body">
+      <p class="body-copy" style="color:#ddd; margin-bottom: 20px;">Live clips, features, and selected videos. Play here or open on YouTube for full resolution.</p>
+      
+      <p class="rail-hint">SWIPE THROUGH VIDEOS <span aria-hidden="true">→</span></p>
+      <div id="video-grid" class="video-grid mobile-rail" tabindex="0" role="region" aria-label="Great Notch Inn videos" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:16px;">
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="L8kKTez3DIg" aria-label="Play video: Liquid Death Made Feastables Peanut Butter Cup Soda With MrBeast"><img src="https://i.ytimg.com/vi/L8kKTez3DIg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">Liquid Death Made Feastables Peanut Butter Cup Soda With MrBeast</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=L8kKTez3DIg" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="qLve97wev_o" aria-label="Play video: Mrs. T's Pierogies Commercial at Great Notch Inn"><img src="https://i.ytimg.com/vi/qLve97wev_o/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">Mrs. T's Pierogies Commercial at Great Notch Inn</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=qLve97wev_o" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="e_fxfJ2Ww4Q" aria-label="Play video: The Great Notch Inn Slideshow"><img src="https://i.ytimg.com/vi/e_fxfJ2Ww4Q/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">The Great Notch Inn Slideshow</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=e_fxfJ2Ww4Q" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="4a4dXO56_qQ" aria-label="Play video: The Last Roadhouse - Great Notch Inn"><img src="https://i.ytimg.com/vi/4a4dXO56_qQ/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">The Last Roadhouse - Great Notch Inn</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=4a4dXO56_qQ" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="sJbxbb1VseI" aria-label="Play video: Great Notch Inn. NJ's Rockin Roadhouse"><img src="https://i.ytimg.com/vi/sJbxbb1VseI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">Great Notch Inn. NJ's Rockin Roadhouse</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=sJbxbb1VseI" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="ChKVZnfocOU" aria-label="Play video: Rocking Out at The Legendary Great Notch Inn"><img src="https://i.ytimg.com/vi/ChKVZnfocOU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">Rocking Out at The Legendary Great Notch Inn</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=ChKVZnfocOU" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="AHCM1Szggas" aria-label="Play video: The Great Notch Inn is one of N.J.'s best old school bar"><img src="https://i.ytimg.com/vi/AHCM1Szggas/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">The Great Notch Inn is one of N.J.'s best old school bar</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=AHCM1Szggas" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-item"><div class="video-wrap">
+          <button type="button" class="yt-facade" data-yt="znYnMDSYEqc" aria-label="Play video: Pride & Joy LIVE at Great Notch Inn"><img src="https://i.ytimg.com/vi/znYnMDSYEqc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-title">Pride & Joy LIVE at Great Notch Inn</span></button>
+        </div>
+          <a class="video-external" href="https://www.youtube.com/watch?v=znYnMDSYEqc" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. LINKS SECTION
+       ========================================================================= -->
+  <section id="links" class="parallax">
+    <div class="panel content-panel texture-wood">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>BAND LINKS</h2>
+      <div class="sub">Bands that played at The Great Notch Inn (external)</div>
+        </div>
+        <div class="section-body">
+      <p class="rail-hint">SWIPE THROUGH THE BANDS <span aria-hidden="true">→</span></p>
+      <div class="static-links-grid mobile-rail" id="bandLinks" tabindex="0" role="region" aria-label="Bands that play at the Inn">
+        <div class="static-band-card"><a href="https://www.facebook.com/pages/Dean-Shot/112467271929" target="_blank" rel="noopener noreferrer">DEAN SHOT'S MUSICAL COLLECTIVE</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/bill.wildbillandfriendscom" target="_blank" rel="noopener noreferrer">WILD BILL WINTERS</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/davefieldsband/" target="_blank" rel="noopener noreferrer">DAVE FIELDS</a></div>
+        <div class="static-band-card"><a href="https://sharpedge.net/" target="_blank" rel="noopener noreferrer">SHARP EDGE BAND</a></div>
+        <div class="static-band-card"><a href="https://hotmonksluv.com/" target="_blank" rel="noopener noreferrer">HOT MONKEY LOVE</a></div>
+        <div class="static-band-card"><a href="https://www.theslipperychickens.com/" target="_blank" rel="noopener noreferrer">SLIPPERY CHICKENS</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/share/g/1BpYmtvu5S/" target="_blank" rel="noopener noreferrer">REAL ROCK DRIVE</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/pages/The-Sidney-Green-Street-band/163804176978078" target="_blank" rel="noopener noreferrer">SIDNEY GREEN STREET BAND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/Earthgrinders" target="_blank" rel="noopener noreferrer">EARTHGRINDERS</a></div>
+        <div class="static-band-card"><a href="https://www.thekootz.com/" target="_blank" rel="noopener noreferrer">THE KOOTZ</a></div>
+        <div class="static-band-card"><a href="http://www.morningwoodbrothers.com/" target="_blank" rel="noopener noreferrer">MORNINGWOOD BROTHERS</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/RatedRBand" target="_blank" rel="noopener noreferrer">RATED R BAND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/zeke.carey" target="_blank" rel="noopener noreferrer">THE ZEKE CAREY BAND</a></div>
+        <div class="static-band-card"><a href="https://www.betteroffdead.com" target="_blank" rel="noopener noreferrer">BETTER OFF DEAD</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/VinMottBlues" target="_blank" rel="noopener noreferrer">VIN MOTT BLUES BAND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/thenitrobluesband" target="_blank" rel="noopener noreferrer">THE NITRO BLUES BAND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/andylackow" target="_blank" rel="noopener noreferrer">ANDY LACKOW & MESS AROUND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/TheUptownBoogieBand" target="_blank" rel="noopener noreferrer">UPTOWN BOOGIE</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/blackradishmusic" target="_blank" rel="noopener noreferrer">BLACK RADISH</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/jack.c.romano.3" target="_blank" rel="noopener noreferrer">JACK ROMANO</a></div>
+        <!-- TODO-JOHN: this card links to facebook.com/james.mcgill.823601, but the live site labels it "JACK ROMANO" (a duplicate). Confirm the label (James McGill?). -->
+        <div class="static-band-card"><a href="https://www.facebook.com/james.mcgill.823601" target="_blank" rel="noopener noreferrer">JACK ROMANO <span class="todo-placeholder" data-todo="band-label">[name to confirm]</span></a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/Jammers4Life" target="_blank" rel="noopener noreferrer">JAM STRAIGHT</a></div>
+        <div class="static-band-card"><a href="https://www.paddylou.com/" target="_blank" rel="noopener noreferrer">PADDY LOU</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/profile.php?id=100086468071197" target="_blank" rel="noopener noreferrer">STONE BIRDS</a></div>
+        <div class="static-band-card"><a href="https://www.instagram.com/thewarehousebandnj/" target="_blank" rel="noopener noreferrer">THE WAREHOUSE</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/wutwuzband" target="_blank" rel="noopener noreferrer">WUT WUZ</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/PrimrosePathNJBand/" target="_blank" rel="noopener noreferrer">PRIMROSE PATH</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/RWSNJ" target="_blank" rel="noopener noreferrer">RUNNING WITH SCISSORS</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/profile.php?id=100064840940026" target="_blank" rel="noopener noreferrer">GENESEE STILLS BAND</a></div>
+        <div class="static-band-card"><a href="https://www.facebook.com/johnbaab/" target="_blank" rel="noopener noreferrer">JOHNNY BAAB</a></div>
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. MERCHANDISE SECTION
+       ========================================================================= -->
+  <section id="merchandise" class="parallax">
+    <div class="panel content-panel texture-paper">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>MERCHANDISE</h2>
+      <div class="sub">T‑shirts, beanies, and memorabilia</div>
+        </div>
+        <div class="section-body">
+      <p class="body-copy" style="color:#ddd; margin-bottom: 20px;">Stop in for in‑store merchandise. <strong>Check out our latest official gear!</strong> (Click any item to view in full size)</p>
+      
+      <p class="rail-hint">SWIPE THROUGH THE MERCH <span aria-hidden="true">→</span></p>
+      <div id="merch-grid" class="merch-grid mobile-rail" tabindex="0" role="region" aria-label="Great Notch Inn merchandise" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px">
+        <figure>
+          <img src="images/merch/merch_list-480.webp" srcset="images/merch/merch_list-480.webp 480w, images/merch/merch_list-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="862" height="1400" data-full="images/merch/merch_list-960.webp" onerror="handleImageError(this)" alt="Prices — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Merchandise & Price List</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/beanie_black-480.webp" srcset="images/merch/beanie_black-480.webp 480w, images/merch/beanie_black-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="832" height="1248" data-full="images/merch/beanie_black-960.webp" onerror="handleImageError(this)" alt="Black Embroidered Beanie — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Black Embroidered Beanie</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/beanie_white-480.webp" srcset="images/merch/beanie_white-480.webp 480w, images/merch/beanie_white-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="832" height="1248" data-full="images/merch/beanie_white-960.webp" onerror="handleImageError(this)" alt="Cream Embroidered Beanie — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Cream Embroidered Beanie</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/beanie_blue-480.webp" srcset="images/merch/beanie_blue-480.webp 480w, images/merch/beanie_blue-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="832" height="1248" data-full="images/merch/beanie_blue-960.webp" onerror="handleImageError(this)" alt="Blue Embroidered Beanie — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Blue Embroidered Beanie</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/beanie1-480.webp" srcset="images/merch/beanie1-480.webp 480w, images/merch/beanie1-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/beanie1-960.webp" onerror="handleImageError(this)" alt="Great Notch Inn Knit Beanie" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Original Knit Beanie</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/truckerhats-480.webp" srcset="images/merch/truckerhats-480.webp 480w, images/merch/truckerhats-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/truckerhats-960.webp" onerror="handleImageError(this)" alt="Great Notch Inn Trucker Hats" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Trucker Hats</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/longsleeve1-480.webp" srcset="images/merch/longsleeve1-480.webp 480w, images/merch/longsleeve1-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/longsleeve1-960.webp" onerror="handleImageError(this)" alt="Long Sleeve T-Shirt with Blue Flames — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Long Sleeve T-Shirt</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/tshirt2-480.webp" srcset="images/merch/tshirt2-480.webp 480w, images/merch/tshirt2-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/tshirt2-960.webp" onerror="handleImageError(this)" alt="Short Sleeve T-Shirt Retro Logo — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Short Sleeve T-Shirt (Retro)</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/tshirt1-480.webp" srcset="images/merch/tshirt1-480.webp 480w, images/merch/tshirt1-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/tshirt1-960.webp" onerror="handleImageError(this)" alt="Short Sleeve T-Shirt Roadhouse Graphic — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Short Sleeve T-Shirt (Roadhouse)</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/tank1-480.webp" srcset="images/merch/tank1-480.webp 480w, images/merch/tank1-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="864" height="864" data-full="images/merch/tank1-960.webp" onerror="handleImageError(this)" alt="Women's Ribbed Tank Top — The Great Notch Inn" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Women's Ribbed Tank Top</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+
+        <figure>
+          <img src="images/merch/towel-480.webp" srcset="images/merch/towel-480.webp 480w, images/merch/towel-960.webp 960w" sizes="(max-width: 520px) 92vw, 260px" width="930" height="930" data-full="images/merch/towel-960.webp" onerror="handleImageError(this)" alt="Great Notch Inn Towel with Flames" loading="lazy" decoding="async">
+          <figcaption style="color:#cfcfcf;margin-top:8px;font-size:0.95rem;text-align:center;font-weight:bold;">Flame Towel</figcaption>
+          <div class="overlay"><div class="cta">Ask Bartender to Purchase</div></div>
+        </figure>
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. HISTORY SECTION
+       ========================================================================= -->
+  <section id="history" class="parallax">
+    <div class="panel content-panel texture-wood">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>HISTORY TIMELINE</h2>
+      <div class="sub">Milestones through the decades</div>
+        </div>
+        <div class="section-body">
+      <p class="rail-hint">SWIPE THROUGH OUR HISTORY <span aria-hidden="true">→</span></p>
+      <div class="timeline mobile-rail" tabindex="0" role="region" aria-label="Great Notch Inn history">
+        <div class="tl-item">
+          <div class="tl-year">1939</div>
+          <p class="body-copy">Gregory & Florence DiLeo open the Great Notch Inn as a roadside tavern.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1988</div>
+          <p class="body-copy">Gregory passes; Florence with Rich & Gail continue the family legacy.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1990s</div>
+          <p class="body-copy">Live rock & blues become nightly staples. The Sunday porch scene grows.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2000s</div>
+          <p class="body-copy">Regional press features the Notch as an essential NJ roadhouse and dive bar landmark.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">Today</div>
+          <p class="body-copy">Live music, cold drinks, motorcycle haven — a true NJ survivor.</p><!-- TODO-JOHN: the live site says "six nights a week" here. Confirm the schedule. -->
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. CONTACT SECTION
+       ========================================================================= -->
+  <section id="contact" style="padding:60px 18px; background:linear-gradient(180deg, rgba(0,0,0,0.96), rgba(0,0,0,0.98)); display:flex; justify-content:center; align-items:center;">
+    <div class="panel content-panel texture-paper" style="padding:28px">
+      <div class="visible-section content-section">
+        <div class="section-heading">
+      <h2>CONTACT</h2>
+      <div class="sub">Send us a message — we'll get back to you</div>
+        </div>
+        <div class="section-body">
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">NAME</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your full name" />
+          </div>
+          <div class="form-field">
+            <label for="email">EMAIL</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="your.email@example.com" />
+          </div>
+          <div class="form-field">
+            <label for="phone">PHONE NUMBER</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field" style="flex:1 1 100%;">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" required placeholder="Message, booking inquiry, or question..."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <button type="button" class="btn-secondary" id="openMailBtn">Open Mail Client</button>
+          <div class="form-note">
+            <!-- TODO-JOHN: contact form service (e.g. Formspree or a GoDaddy PHP mailer). Until then this opens the visitor's email app. -->
+            "Send Message" opens your email app with the message filled in, addressed to <strong style="color:var(--accent-cyan)">greatnotchinn@gmail.com</strong>.
+          </div>
+        </div>
+      </form>
+
+      <h3 class="map-title">Find Us</h3>
+      <!-- TODO-JOHN: swap this address-search map for the embed code from the official Google Business Profile once John sends the real link. -->
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=The+Great+Notch+Inn,+400+Route+46+West,+Little+Falls,+NJ+07424&amp;output=embed"
+                title="Map: The Great Notch Inn, 400 Route 46 West, Little Falls, NJ 07424" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <p class="embed-fallback"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer">Open this map in Google Maps ↗</a></p>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Mobile quick actions (hidden on desktop) -->
+  <nav class="action-bar" aria-label="Quick actions">
+    <a href="tel:+19732567742">Call</a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer" data-todo="maps-link">Directions</a><!-- TODO-JOHN: swap for the real Google Maps / Business link -->
+    <a href="#calendar" class="action-live">Live Tonight</a>
+  </nav>
+
+  <!-- =========================================================================
+       11. FOOTER
+       ========================================================================= -->
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;text-align:left;">
+      <div style="flex:1 1 320px;">
+        <h3 style="margin:0 0 8px 0; color: var(--molten-start);">The Great Notch Inn</h3>
+        <div style="color:#bbb; font-size: 0.95rem;">Family owned and operated since 1939 — A New Jersey landmark</div>
+        <div style="margin-top:10px;color:#ccc">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer">400 Route 46 West, Little Falls, NJ 07424</a>
+          · <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Great+Notch+Inn%2C+400+Route+46+West%2C+Little+Falls%2C+NJ+07424" target="_blank" rel="noopener noreferrer" data-todo="maps-link">Directions</a><!-- TODO-JOHN: swap for the real Google Maps / Business link -->
+        </div>
+        <div style="margin-top:6px">
+          <a href="tel:+19732567742" style="font-weight: bold; color: var(--accent-yellow);">Call (973) 256-7742</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 200px;">
+        <strong style="color:var(--accent-lime); font-size: 1.05rem;">Quick Links</strong>
+        <div style="color:#ccc;margin-top:8px;line-height:1.8">
+          <a href="#calendar">Live Calendar</a><br>
+          <a href="#merchandise">Merchandise</a><br>
+          <a href="#videos">Event Videos</a><br>
+          <a href="mailto:greatnotchinn@gmail.com?subject=Private%20Booking%20Inquiry">Private Bookings</a><br>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 300px;">
+        <strong style="color:var(--accent-lime); font-size: 1.05rem;">Experience</strong>
+        <div style="color:#ccc;margin-top:8px;line-height:1.5">Live Rock &amp; Blues · No Cover Charge · Full Bar &amp; Package Goods</div><!-- TODO-JOHN: restore "every night" only once the music schedule is confirmed -->
+        <div class="social-row" style="justify-content:flex-start; margin-top: 12px;">
+          <a class="social-btn" href="https://www.facebook.com/profile.php?id=100051551302390" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="social-btn" href="https://www.instagram.com/greatnotchinn/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="social-btn" href="https://x.com/GreatNotchInn/" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:24px;color:#88dfff;font-size:.9rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+      © 2026 The Great Notch Inn. All rights reserved. Est. 1939.
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Close photo viewer">✕</button>
+    <div class="lb-nav">
+      <button type="button" class="lb-btn" id="lbPrev" aria-label="Previous photo">⟵ Prev</button>
+      <button type="button" class="lb-btn" id="lbNext" aria-label="Next photo">Next ⟶</button>
+    </div>
+    <img id="lbImg" alt="" />
+  </div>
+
+  <!-- Event Details Modal -->
+  <div id="eventModal" class="modal-backdrop" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close event details">✕</button>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <span class="modal-time" id="modalTime"></span>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-location" id="modalLocation" style="margin-bottom:20px; color:#aaa; font-style:italic; font-size:0.95rem;"></div>
+      <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn">View on Google Calendar</a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/app.js" defer></script>
+  <script src="js/monthly-calendar.js" defer></script>
+  <script src="js/mobile-layout.js" defer></script>
+</body>
+</html>
